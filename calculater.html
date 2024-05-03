@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATER</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 50px;
+            color: white;
+            background-color: #ae9fc9;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M45 250L295 0L568 0L318 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M263.6 250L513.6 0L618.6 0L368.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M501.20000000000005 250L751.2 0L887.7 0L637.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M733.8000000000001 250L983.8000000000001 0L1313.8000000000002 0L1063.8000000000002 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M1402 250L1152 0L891 0L1141 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M1158.4 250L908.4000000000001 0L794.4000000000001 0L1044.4 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M954.8 250L704.8 0L646.3 0L896.3 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M726.1999999999999 250L476.19999999999993 0L435.69999999999993 0L685.6999999999999 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M1276.5657432569265 250L1440 86.56574325692634L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L163.43425674307366 250L 0 86.56574325692634z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1001'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1002'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        }
+        #calculater{
+            max-width: 330px;
+            margin: auto;
+            border: 2px solid #140a4d;
+            border-radius: 4px;
+            width: 600px;
+            height: 250px;
+        }
+        input{
+            width: 290px;
+            padding: 20px;
+            font-size: 16px;
+            margin: 2px;
+            cursor: pointer;
+            border: none;
+            color: black;
+        }
+        button{
+
+            width: 76px;
+            height: 45px;
+            font-size: 20px;
+
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        #equals:hover{
+            background-color: #61da61;
+        }
+        #clear{
+            background-color: black;
+            color: white;
+        }
+        #clear:hover{
+            background-color: red;
+            color: white;
+        }
+</style>
+</head>
+<body>
+    <h1>CALCULATER</h1>
+     <div id="calculater">
+        <input type="text" id="display" disabled>
+        <br>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <br>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <br>
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <br>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button id="clear" onclick="clearDisplay()">C</button>
+        <button id="equals" onclick="calculateResult()">=</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <br>
+    </div>
+
+
+        <script>
+        // javascrit code
+
+        function appendToDisplay(value){
+            document.getElementById("display").value+=value;
+                }
+
+          function clearDisplay(){
+            document.getElementById('display').value='';
+          } 
+          
+          function calculateResult()
+          {
+
+                var expression=document.getElementById('display').value;
+                var result;
+
+                try{
+                    result=eval(expression);
+                    document.getElementById('display').value=result;
+
+                }
+                catch(error){
+
+                        document.getElementById('display').value='error'
+                }
+            }
+
+            
+
+          
+
+
+        </script>
+</body>
+</html>
